@@ -1,0 +1,6 @@
+{
+  "name": "X1 | Luxury Contemporary Streetwear",
+  "description": "الموقع الرسمي لبراند الملابس المعاصرة X1 - تصاميم ستريت وير فاخرة، خامات ثقيلة وتفاصيل معمارية متقنة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
