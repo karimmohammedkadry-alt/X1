@@ -21,8 +21,6 @@ export const ComparisonModal: React.FC<ComparisonModalProps> = ({
   language,
   onAddToCart
 }) => {
-  if (!isOpen) return null;
-
   const isAr = language === 'ar';
 
   // State for the two products being compared
@@ -35,6 +33,8 @@ export const ComparisonModal: React.FC<ComparisonModalProps> = ({
 
   const [addedA, setAddedA] = useState(false);
   const [addedB, setAddedB] = useState(false);
+
+  if (!isOpen) return null;
 
   const productA = products.find((p) => p.id === productAId) || products[0];
   const productB = products.find((p) => p.id === productBId) || products[1] || products[0];

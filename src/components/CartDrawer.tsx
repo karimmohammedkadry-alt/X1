@@ -21,13 +21,13 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
   language,
   onOpenCheckout
 }) => {
-  if (!isOpen) return null;
-
   const isAr = language === 'ar';
   const [promoCode, setPromoCode] = useState('');
   const [promoDiscount, setPromoDiscount] = useState<number>(0);
   const [promoError, setPromoError] = useState<string | null>(null);
   const [appliedCode, setAppliedCode] = useState<string>('');
+
+  if (!isOpen) return null;
 
   const calculateSubtotal = () => {
     return items.reduce((acc, item) => acc + item.product.priceEGP * item.quantity, 0);

@@ -17,10 +17,10 @@ export const SearchModal: React.FC<SearchModalProps> = ({
   language,
   onSelectProduct
 }) => {
-  if (!isOpen) return null;
-
   const isAr = language === 'ar';
   const [query, setQuery] = useState('');
+
+  if (!isOpen) return null;
 
   const filtered = products.filter((p) => {
     const q = query.toLowerCase();

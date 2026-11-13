@@ -21,8 +21,6 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
   promoApplied,
   onClearCart
 }) => {
-  if (!isOpen) return null;
-
   const isAr = language === 'ar';
 
   const [formData, setFormData] = useState({
@@ -38,6 +36,8 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
   const [orderConfirmed, setOrderConfirmed] = useState(false);
   const [confirmedOrderId, setConfirmedOrderId] = useState('');
   const [copiedTracking, setCopiedTracking] = useState(false);
+
+  if (!isOpen) return null;
 
   const calculateSubtotal = () => {
     return items.reduce((acc, item) => acc + item.product.priceEGP * item.quantity, 0);
